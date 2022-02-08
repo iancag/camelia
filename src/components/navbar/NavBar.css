@@ -1,0 +1,40 @@
+nav {
+    background-color: #282c34;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+    display: block;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.separator {
+    display: none;
+}
+
+
+@media screen and (min-width:1200px){
+    nav {
+        display: flex;
+        justify-content: left;
+    }
+
+    ul li{
+        display: inline-block;
+        padding: 0px;
+    }
+    
+    .logo {
+        max-width: 220px;
+    }
+
+    .separator {
+        display: inline;
+    }
+}
