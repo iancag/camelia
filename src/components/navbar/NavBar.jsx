@@ -1,7 +1,8 @@
 import "./NavBar.css"
-import cameliaLogo from "../../assets/common/camelia-logo.png"
 import { MenuItem } from "./components/MenuItem";
 import { Button } from "@mui/material";
+import cameliaLogo from "../../assets/common/camelia-logo.png";
+import { ShoppingCartWidget } from "./components/cart-widget/CartWidget";
 
 const iniciaSesionClick = (e) => {
     e.preventDefault();
@@ -13,13 +14,16 @@ export function NavBar() {
         <ul>
             <li><img src={cameliaLogo} className="logo" alt="Camelia" /></li>
             <li><MenuItem url="/inicio" name="Home" /></li>
-            <li><MenuItem url="/accesorios" name="Accesorios" /></li>
+            <li><MenuItem url="/accesorios" name="Accesorios"><h1>home</h1></MenuItem></li>
             <li><MenuItem url="/como-rentar" name="¿Cómo rentar?" /></li>
             <li><MenuItem url="/faq" name="Preguntas frecuentes" /></li>
             <li className="separator">&#124;</li>
             <li><MenuItem url="/registrate" name="Regístrate" /></li>
-            <li><Button variant="outlined" style={{color:"white", borderColor:"#AC8F76"}} href="inicia-sesion" onClick={iniciaSesionClick}>Inicia Sesión</Button></li>
+            <li><Button variant="outlined" style={{ color: "white", borderColor: "#AC8F76" }} href="inicia-sesion" onClick={iniciaSesionClick}>Inicia Sesión</Button></li>
         </ul>
+        <div className="shopping-cart-widget">
+            <ShoppingCartWidget />
+        </div>
     </nav>;
 }
 

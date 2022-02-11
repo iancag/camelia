@@ -1,4 +1,5 @@
-import { NavBar } from './components/navbar/NavBar'
+import { NavBar } from './components/navbar/NavBar';
+import { ItemListContainer } from './components/item-list-container/ItemListContainer';
 import './App.css';
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <div id="main">
+        <ItemListContainer title="Accesorios" />
+      </div>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 nav {
     background-color: #282c34;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+    padding: 1px 0 15px 0;
+    text-align: center;
 }
 
 ul li{
@@ -18,11 +17,16 @@ ul li{
     display: none;
 }
 
+.shopping-cart-widget {
+    position: relative;
+    left: 24px;
+}
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1250px){
     nav {
         display: flex;
-        justify-content: left;
+        justify-content: center;
+        padding: 1px 0 0px 0;
     }
 
     ul li{
@@ -31,10 +35,19 @@ ul li{
     }
     
     .logo {
+        position: relative;
         max-width: 220px;
+        top: 7px;
     }
 
     .separator {
         display: inline;
+    }
+
+    .shopping-cart-widget {
+        position: relative;
+        margin: auto 0px;
+        top: 10px;
+        left: 50px;
     }
 }

@@ -1,6 +1,12 @@
+
 body {
+  font-family: 'roboto';
   background-color: white;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: black;
+}
+
+h1, h2 {
+  font-family: 'jost';
 }
