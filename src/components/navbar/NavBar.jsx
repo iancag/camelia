@@ -9,7 +9,7 @@ const iniciaSesionClick = (e) => {
     alert("Próximamente");
 }
 
-export function NavBar() {
+export function NavBar(props) {
     return <nav role="navigation">
         <ul>
             <li><img src={cameliaLogo} className="logo" alt="Camelia" /></li>
@@ -22,7 +22,7 @@ export function NavBar() {
             <li><Button variant="outlined" style={{ color: "white", borderColor: "#AC8F76" }} href="inicia-sesion" onClick={iniciaSesionClick}>Inicia Sesión</Button></li>
         </ul>
         <div className="shopping-cart-widget">
-            <ShoppingCartWidget />
+            <ShoppingCartWidget cartCount = { props.cartCount }/>
         </div>
     </nav>;
 }

@@ -1,10 +1,10 @@
 import './CartWidget.css';
 import shoppingCart from '../../../../assets/common/shopping-cart.svg'
 
-export const ShoppingCartWidget = () =>
+export const ShoppingCartWidget = ({cartCount}) =>
     <>
         <img src={shoppingCart} alt="cart" className="shopping-cart" />
         <div className="cart-count">
-            <label>3</label>
+            <label>{cartCount}</label>
         </div>
     </>
