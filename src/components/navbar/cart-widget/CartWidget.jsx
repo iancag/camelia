@@ -1,5 +1,5 @@
 import './CartWidget.css';
-import shoppingCart from '../../../../assets/common/shopping-cart.svg'
+import shoppingCart from '../../../assets/common/shopping-cart.svg'
 
 export const ShoppingCartWidget = ({cartCount}) =>
     <>

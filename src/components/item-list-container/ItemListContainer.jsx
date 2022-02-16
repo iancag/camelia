@@ -6,8 +6,8 @@ export const ItemListContainer = ({ title, onAdd }) => {
         <h1 className="item-list-container-title">{title}</h1>
 
         <div className="item-list-container-items">
-            <Item onAdd={onAdd} stock={3} />
-            <Item onAdd={onAdd} stock={5} />
+            <Item onAdd={(itemsAdded)=>onAdd(itemsAdded)} stock={3} title="Title 1" description="description 1"/>
+            <Item onAdd={(itemsAdded)=>onAdd(itemsAdded)} stock={5} title="Title 2" description="description 2"/>
         </div>
     </div>
 }

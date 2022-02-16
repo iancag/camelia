@@ -1,8 +1,8 @@
 import "./NavBar.css"
-import { MenuItem } from "./components/MenuItem";
+import { MenuItem } from "./menu-item/MenuItem";
 import { Button } from "@mui/material";
 import cameliaLogo from "../../assets/common/camelia-logo.png";
-import { ShoppingCartWidget } from "./components/cart-widget/CartWidget";
+import { ShoppingCartWidget } from "./cart-widget/CartWidget";
 
 const iniciaSesionClick = (e) => {
     e.preventDefault();
