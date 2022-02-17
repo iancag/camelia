@@ -3,7 +3,7 @@ import { Button } from "@mui/material"
 import "./Item.css";
 import { useState } from "react";
 
-export const Item = ({onAdd, stock, title, description}) => {
+export const Item = ({onAdd, stock, item}) => {
     const [itemsAdded, setItemsAdded] = useState(0);
     const addItems = (itemsAdded) => {
         setItemsAdded(itemsAdded);
@@ -11,10 +11,13 @@ export const Item = ({onAdd, stock, title, description}) => {
 
     return <div className="card">
         <div className="title">
-            {title}
+            {item.brand}
         </div>
         <div className="description">
-            {description}
+            {item.description}
+        </div>
+        <div className="price">
+            ${item.price} MXN
         </div>
         <div className="counter">
             <ItemCount stock={stock} addItems={(itemsAdded)=>addItems(itemsAdded)}/>
