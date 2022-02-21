@@ -4,14 +4,14 @@ import { ItemListContainer } from './components/item-list-container/ItemListCont
 import './App.css';
 
 function App() {
-  const [cartCount, setCartCount] = useState(0)
+  const [cartCount, setCartCount] = useState(0);
 
   const onAdd = (itemsAdded) => {
     if (itemsAdded) {
-      console.log(itemsAdded)
-      setCartCount(() => cartCount + itemsAdded)
+      console.log(itemsAdded);
+      setCartCount(() => cartCount + itemsAdded);
     }
-  }
+  };
 
   return (
     <div>

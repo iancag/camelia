@@ -1,53 +1,53 @@
 nav {
-    background-color: #282c34;
-    padding: 1px 0 15px 0;
-    text-align: center;
+  background-color: #282c34;
+  padding: 1px 0 15px 0;
+  text-align: center;
 }
 
-ul li{
-    display: block;
-    padding: 10px;
+ul li {
+  display: block;
+  padding: 10px;
 }
 
 .logo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .separator {
-    display: none;
+  display: none;
 }
 
 .shopping-cart-widget {
-    position: relative;
-    left: 24px;
+  position: relative;
+  left: 24px;
 }
 
-@media screen and (min-width:1250px){
-    nav {
-        display: flex;
-        justify-content: center;
-        padding: 1px 0 0px 0;
-    }
+@media screen and (min-width: 1250px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 1px 0 0px 0;
+  }
 
-    ul li{
-        display: inline-block;
-        padding: 0px;
-    }
-    
-    .logo {
-        position: relative;
-        max-width: 220px;
-        top: 7px;
-    }
+  ul li {
+    display: inline-block;
+    padding: 0px;
+  }
 
-    .separator {
-        display: inline;
-    }
+  .logo {
+    position: relative;
+    max-width: 220px;
+    top: 7px;
+  }
 
-    .shopping-cart-widget {
-        position: relative;
-        margin: auto 0px;
-        top: 10px;
-        left: 50px;
-    }
+  .separator {
+    display: inline;
+  }
+
+  .shopping-cart-widget {
+    position: relative;
+    margin: auto 0px;
+    top: 10px;
+    left: 50px;
+  }
 }
