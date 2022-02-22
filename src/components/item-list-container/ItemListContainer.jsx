@@ -20,13 +20,15 @@ export const ItemListContainer = ({ title, onAdd }) => {
                   id: 1,
                   brand: 'Itilu',
                   price: 50,
-                  description: 'Anillo 1'
+                  description: 'Anillo 1',
+                  imageUrl: '/images/classic-wedding-band.jpeg'
                 },
                 {
                   id: 2,
                   brand: 'Multini',
                   price: 30,
-                  description: 'Anillo 2'
+                  description: 'Anillo 2',
+                  imageUrl: '/images/brushed-and-polished-comfort-fit-wedding-ring.jpeg'
                 }
               ]
             },
@@ -37,8 +39,16 @@ export const ItemListContainer = ({ title, onAdd }) => {
                 {
                   id: 1,
                   brand: 'Sombrex',
-                  price: 50,
-                  description: 'Sombrero 1'
+                  price: 120,
+                  description: 'Sombrero Negro',
+                  imageUrl: '/images/sombrero-1.webp'
+                },
+                {
+                  id: 2,
+                  brand: 'Sombrex',
+                  price: 130,
+                  description: 'Sombrero Blanco',
+                  imageUrl: '/images/sombrero-2.webp'
                 }
               ]
             }
@@ -54,15 +64,21 @@ export const ItemListContainer = ({ title, onAdd }) => {
           subcategories: [
             {
               id: 1,
-              name: 'ring',
+              name: 'wedding',
               items: [
                 {
                   item: [
                     {
                       id: 1,
-                      brand: 'Itilu',
+                      brand: 'wed1',
                       price: 50,
-                      description: 'Anillo 1'
+                      description: 'the wedding dress 1'
+                    },
+                    {
+                      id: 2,
+                      brand: 'wed3',
+                      price: 40,
+                      description: 'the wedding dress 2'
                     }
                   ]
                 }
@@ -75,12 +91,11 @@ export const ItemListContainer = ({ title, onAdd }) => {
   ];
 
   const getProducts = () => {
-    const promise = new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products[0]);
-      }, 2000);
+      }, 1000);
     });
-    return promise;
   };
 
   useEffect(() => {
@@ -98,6 +113,8 @@ export const ItemListContainer = ({ title, onAdd }) => {
             key={subcategory.id}
             onAdd={(itemsAdded) => onAdd(itemsAdded)}
             items={subcategory}
+            categoryName={category.name}
+            subcategoryName={subcategory.name}
           />
         ))
       )}
