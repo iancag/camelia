@@ -20,12 +20,7 @@ export function NavBar(props) {
           <MenuItem url="/inicio" name="Home" />
         </li>
         <li>
-          <MenuItem url="/accesorios" name="Accesorios">
-            <h1>home</h1>
-          </MenuItem>
-        </li>
-        <li>
-          <MenuItem url="/como-rentar" name="¿Cómo rentar?" />
+          <MenuItem url="/como-comprar" name="¿Cómo comprar?" />
         </li>
         <li>
           <MenuItem url="/faq" name="Preguntas frecuentes" />

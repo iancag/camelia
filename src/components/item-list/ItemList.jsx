@@ -4,7 +4,6 @@ export const ItemList = ({ items, onAdd, categoryName, subcategoryName }) => {
   return (
     <div className="item-list-container-items">
       <h2>{items.name}</h2>
-      {console.log(items.items[0])}
       {items.items.map((item) => {
         return (
           <Item

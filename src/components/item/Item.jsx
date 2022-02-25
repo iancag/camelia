@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import { ItemCount } from '../item-count/ItemCount';
 import { Button } from '@mui/material';
 import './Item.css';
 import { useState } from 'react';
-import { ItemDetailContainer } from '../item-detail-container/ItemDetailContainer';
 
 export const Item = (props) => {
   const { onAdd, stock, item, categoryName, subcategoryName } = props;
@@ -11,7 +11,7 @@ export const Item = (props) => {
     setItemsAdded(itemsAdded);
   };
 
-  const itemDetailUrl = `/${categoryName}/${subcategoryName}/${item.id}`;
+  const itemDetailUrl = `${categoryName}/${subcategoryName}/${item.id}`;
   return (
     <div className="card">
       <div className="title">{item.brand}</div>
@@ -24,9 +24,7 @@ export const Item = (props) => {
         <img src={item.imageUrl} alt="image" width="200px" />
       </div>
       <div>
-        {/* Para siguiente Entrega con Router */}
-        {/* <a href={itemDetailUrl}>Detalles</a>  */}
-        <ItemDetailContainer item={(onAdd, stock, item)} />
+        <Link to={`/detalles/${itemDetailUrl}`}>Detalles</Link>
       </div>
       <div className="add">
         <Button

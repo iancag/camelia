@@ -1,8 +1,14 @@
-import { Button } from '@mui/material';
-import { useState } from 'react';
-import { ItemCount } from '../item-count/ItemCount';
+import { useParams } from 'react-router-dom';
+import { products } from '../../assets/data/data';
 
-export const ItemDetail = ({ item }) => {
+export const ItemDetail = () => {
+  const { category, subcategory, id } = useParams();
+
+  const item = products
+    .filter((p) => p.categories.some((c) => c.name === category))[0]
+    .categories[0].subcategories.filter((s) => s.name === subcategory)[0]
+    .items.filter((item) => item.id === parseInt(id))[0];
+
   return (
     <div className="card">
       <div className="title">{item.brand}</div>

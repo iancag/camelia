@@ -1,3 +1,11 @@
+# **\*\***\***\*\***
+
+    Este proyecto es el inicio hacia un e-commerce sobre productos para bodas.
+    Por el momento se implementa el NavBar, Inicio y Detalle de producto.
+    *Principalmente la funcionalidad de React, en siguientes entregas ire mejorando el UX/UI.
+
+# **\*\***\***\*\***
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
