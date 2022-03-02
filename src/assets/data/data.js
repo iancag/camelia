@@ -14,14 +14,16 @@ export const products = [
                 brand: 'Itilu',
                 price: 50,
                 description: 'Anillo 1',
-                imageUrl: '/images/classic-wedding-band.jpeg'
+                imageUrl: '/images/classic-wedding-band.jpeg',
+                stock: 3
               },
               {
                 id: 2,
                 brand: 'Multini',
                 price: 30,
                 description: 'Anillo 2',
-                imageUrl: '/images/brushed-and-polished-comfort-fit-wedding-ring.jpeg'
+                imageUrl: '/images/brushed-and-polished-comfort-fit-wedding-ring.jpeg',
+                stock: 2
               }
             ]
           },
@@ -34,14 +36,16 @@ export const products = [
                 brand: 'Sombrex',
                 price: 120,
                 description: 'Sombrero Negro',
-                imageUrl: '/images/sombrero-1.webp'
+                imageUrl: '/images/sombrero-1.webp',
+                stock: 5
               },
               {
                 id: 2,
                 brand: 'Sombrex',
                 price: 130,
                 description: 'Sombrero Blanco',
-                imageUrl: '/images/sombrero-2.webp'
+                imageUrl: '/images/sombrero-2.webp',
+                stock: 10
               }
             ]
           }

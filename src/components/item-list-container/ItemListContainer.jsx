@@ -2,7 +2,7 @@ import './ItemListContainer.scss';
 import { ItemList } from '../item-list/ItemList';
 import { useEffect, useState } from 'react';
 import { Loading } from '../loading/Loading';
-import { products } from '../../assets/data/data';
+import { products } from '../../assets/data/data'
 
 export const ItemListContainer = ({ title, onAdd }) => {
   const [items, setItems] = useState([]);

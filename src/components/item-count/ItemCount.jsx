@@ -17,7 +17,7 @@ export const ItemCount = (props) => {
 
   useEffect(() => {
     addItems(total);
-  }, [addItems, total]);
+  }, [total]);
 
   return (
     <div>

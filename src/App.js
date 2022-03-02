@@ -12,7 +12,6 @@ function App() {
 
   const onAdd = (itemsAdded) => {
     if (itemsAdded) {
-      console.log(itemsAdded);
       setCartCount(() => cartCount + itemsAdded);
     }
   };
@@ -46,7 +45,9 @@ function App() {
           }
         />
         <Route path="/como-comprar" element={<HowToBuy />} />
-        <Route path="/detalles/:category/:subcategory/:id" element={<ItemDetailContainer />} />
+        <Route path="/detalles/:category/:subcategory/:id" element={<ItemDetailContainer stock={0} onAdd={(itemsAdded) => {
+          onAdd(itemsAdded);
+        }} />} />
       </Routes>
     </BrowserRouter>
   );
