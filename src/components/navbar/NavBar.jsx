@@ -41,7 +41,7 @@ export function NavBar(props) {
         </li>
       </ul>
       <div className="shopping-cart-widget">
-        <ShoppingCartWidget cartCount={props.cartCount} />
+        <ShoppingCartWidget />
       </div>
     </nav>
   );

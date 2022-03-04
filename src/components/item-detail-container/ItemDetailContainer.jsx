@@ -15,10 +15,6 @@ export const ItemDetailContainer = (props) => {
     setItemsAdded(itemsAdded);
   };
 
-  // useEffect(()=>{
-
-  // }, ['']);
-
   const item = products.filter(p => p.categories.some(c => c.name === category))[0]
     .categories[0].subcategories.filter(s => s.name === subcategory)[0]
     .items.filter(item => item.id === parseInt(id))[0];
@@ -36,7 +32,7 @@ export const ItemDetailContainer = (props) => {
   };
 
   const handleOnClick = (itemsAdded) => {
-    onAdd(itemsAdded);
+    onAdd(itemsAdded, item);
     setShowGoToCart(true);
   }
 
