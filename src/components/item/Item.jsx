@@ -14,19 +14,13 @@ export const Item = (props) => {
   const itemDetailUrl = `${categoryName}/${subcategoryName}/${item.id}`;
   return (
     <div className="card">
-      <div className="title">{item.brand}</div>
-      <div className="description">{item.description}</div>
-      <div className="price">${item.price} MXN</div>
-      <div className="counter">
-        <ItemCount stock={stock} addItems={(itemsAdded) => addItems(itemsAdded)} />
-      </div>
+      <div style={{ textAlign: "center" }} className="title">{item.brand}</div>
+      <div style={{ textAlign: "center" }} className="description">{item.description}</div>
       <div>
-        <img src={item.imageUrl} alt="image" width="200px" />
+        <Link to={`/detalles/${itemDetailUrl}`}><img src={item.imageUrl} alt="image" width="200px" /></Link>
       </div>
-      <div>
-        <Link to={`/detalles/${itemDetailUrl}`}>Detalles</Link>
-      </div>
-      <div className="add">
+      <div style={{ textAlign: "center" }}>
+        <div className="price" style={{marginBottom: "16px"}}>${item.price} MXN</div>
         <Button
           onClick={() => onAdd(itemsAdded)}
           variant="contained"
@@ -34,6 +28,9 @@ export const Item = (props) => {
         >
           Agregar
         </Button>
+        <div className="counter">
+          <ItemCount stock={stock} addItems={(itemsAdded) => addItems(itemsAdded)} />
+        </div>
       </div>
     </div>
   );

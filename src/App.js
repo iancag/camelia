@@ -6,6 +6,7 @@ import { Home } from './components/home/Home';
 import { HowToBuy } from './components/how-to-buy/HowToBuy';
 import { ItemDetailContainer } from './components/item-detail-container/ItemDetailContainer';
 import { CartContext } from '../src/context/Context';
+import { Cart } from './components/cart/Cart';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -55,6 +56,7 @@ function App() {
           <Route path="/detalles/:category/:subcategory/:id" element={<ItemDetailContainer stock={0} onAdd={(itemsAdded, item) => {
             onAdd(itemsAdded, item);
           }} />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </CartContext.Provider>

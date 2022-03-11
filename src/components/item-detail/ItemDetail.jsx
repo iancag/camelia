@@ -1,12 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { products } from '../../assets/data/data';
+import { getProducts } from '../../utilities/db';
 
 export const ItemDetail = () => {
     const { category, subcategory, id } = useParams();
 
-    const item = products.filter(p => p.categories.some(c => c.name === category))[0]
-        .categories[0].subcategories.filter(s => s.name === subcategory)[0]
-        .items.filter(item => item.id === parseInt(id))[0];
+    const item = getProducts(category, subcategory, id);
 
     return (
         <div className="card">

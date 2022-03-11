@@ -5,6 +5,7 @@ import { ItemDetail } from '../item-detail/ItemDetail';
 import { ItemCount } from '../item-count/ItemCount';
 import { products } from '../../assets/data/data';
 import { Button } from '@mui/material';
+import { getProducts } from '../../utilities/db';
 
 export const ItemDetailContainer = (props) => {
   const { category, subcategory, id } = useParams();
@@ -15,9 +16,7 @@ export const ItemDetailContainer = (props) => {
     setItemsAdded(itemsAdded);
   };
 
-  const item = products.filter(p => p.categories.some(c => c.name === category))[0]
-    .categories[0].subcategories.filter(s => s.name === subcategory)[0]
-    .items.filter(item => item.id === parseInt(id))[0];
+  const item = getProducts(category, subcategory, id);
 
   const style = {
     display: 'flex',
@@ -63,10 +62,8 @@ export const ItemDetailContainer = (props) => {
                 :
                 <>
                   <div>
-                    <Button component={Link} variant="contained" to="/cart">Go to Cart</Button>
-                  </div>
-                  <div>
-                    <Link to="/inicio">Seguir Comprando</Link>
+                    <Button component={Link} variant="outlined" to="/inicio" style={{marginRight:"10px"}}>Seguir Comprando</Button>
+                    <Button component={Link} variant="contained" to="/cart">Ir a Carrito</Button>
                   </div>
                 </>
             }
