@@ -4,8 +4,7 @@ import { Button } from '@mui/material';
 import './Item.css';
 import { useState } from 'react';
 
-export const Item = (props) => {
-  const { onAdd, stock, item, categoryName, subcategoryName } = props;
+export const Item = ({ onAdd, stock, item, categoryName, subcategoryName }) => {
   const [itemsAdded, setItemsAdded] = useState(0);
   const addItems = (itemsAdded) => {
     setItemsAdded(itemsAdded);
@@ -22,7 +21,7 @@ export const Item = (props) => {
       <div style={{ textAlign: "center" }}>
         <div className="price" style={{marginBottom: "16px"}}>${item.price} MXN</div>
         <Button
-          onClick={() => onAdd(itemsAdded)}
+          onClick={() => onAdd(itemsAdded, item)}
           variant="contained"
           style={{ backgroundColor: '#AC8F76', borderColor: 'black' }}
         >

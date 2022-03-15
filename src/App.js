@@ -10,17 +10,25 @@ import { Cart } from './components/cart/Cart';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
-  const [cartItems, setCartItems] = useState([{ item: [], totalCount: 0}]);
+  const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (itemsAdded, item) => {
     if (itemsAdded) {
       setCartCount(() => cartCount + itemsAdded);
-      setCartItems((items) => [ ...items, { item: item, totalCount: cartCount + itemsAdded}]);
+
+      let existItem = cartItems.find(cartItem=> cartItem.item.id === item.id && cartItem.item.brand === item.brand);
+
+      if(!!existItem) {
+          existItem.totalCount = cartCount + itemsAdded;
+      }
+      else {
+        setCartItems((items) => [...items, { item: item, totalCount: cartCount + itemsAdded }]);
+      }
     }
   };
 
   useEffect(()=>{
-    console.log(cartItems);
+    //console.log(cartItems);
   }, [cartItems]);
 
   return (
@@ -36,8 +44,8 @@ function App() {
             path="/"
             element={
               <Home
-                onAdd={(itemsAdded) => {
-                  onAdd(itemsAdded);
+                onAdd={(itemsAdded, item) => {
+                  onAdd(itemsAdded, item);
                 }}
               />
             }
@@ -46,8 +54,8 @@ function App() {
             path="/inicio"
             element={
               <Home
-                onAdd={(itemsAdded) => {
-                  onAdd(itemsAdded);
+                onAdd={(itemsAdded, item) => {
+                  onAdd(itemsAdded, item);
                 }}
               />
             }

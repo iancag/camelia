@@ -28,7 +28,7 @@ export const ItemListContainer = ({ title, onAdd }) => {
         category.subcategories.map((subcategory) => (
           <ItemList
             key={subcategory.id}
-            onAdd={(itemsAdded) => onAdd(itemsAdded)}
+            onAdd={(itemsAdded, item) => onAdd(itemsAdded, item)}
             items={subcategory}
             categoryName={category.name}
             subcategoryName={subcategory.name}

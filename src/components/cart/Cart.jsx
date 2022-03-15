@@ -3,14 +3,14 @@ import { CartContext } from "../../context/Context";
 
 export const Cart = () => {
     const value = useContext(CartContext);
-    console.log(value)
+
     return (
-        <div>
+        <div className='card' style={{ textAlign: 'center', margin: '5% auto' }}>
             Items Total:
             {value.cartCount ?? value.cartCount}
             {
                 value.cartItems.map((cartItem, index) =>
-                    <div key={index}>
+                    <div key={index} className='card'>
                         <div>Descripción: {cartItem.item.description}</div>
                         <div>Cantidad: {cartItem.totalCount}</div>
                     </div>)

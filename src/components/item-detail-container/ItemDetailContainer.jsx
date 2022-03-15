@@ -3,13 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 import { ItemDetail } from '../item-detail/ItemDetail';
 import { ItemCount } from '../item-count/ItemCount';
-import { products } from '../../assets/data/data';
 import { Button } from '@mui/material';
 import { getProducts } from '../../utilities/db';
 
-export const ItemDetailContainer = (props) => {
+export const ItemDetailContainer = ({ onAdd }) => {
   const { category, subcategory, id } = useParams();
-  const { onAdd } = props;
   const [itemsAdded, setItemsAdded] = useState(0);
   const [showGoToCart, setShowGoToCart] = useState(false);
   const addItems = (itemsAdded) => {

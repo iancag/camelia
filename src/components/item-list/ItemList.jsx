@@ -9,7 +9,7 @@ export const ItemList = ({ items, onAdd, categoryName, subcategoryName }) => {
           return (
             <Item
               key={item.id}
-              onAdd={(itemsAdded) => onAdd(itemsAdded)}
+              onAdd={(itemsAdded, item) => onAdd(itemsAdded, item)}
               stock={3}
               item={item}
               categoryName={categoryName}

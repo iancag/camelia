@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import { products } from '../../assets/data/data';
 import { getProducts } from '../../utilities/db';
 
 export const ItemDetail = () => {
